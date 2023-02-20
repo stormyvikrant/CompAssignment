@@ -31,7 +31,7 @@ const Registration = () => {
 
 
 
-  
+ 
   const SignupHandle=(e)=>{
     e.preventDefault()
      axios.post("https://ill-pink-dugong-belt.cyclic.app/userData",arr)
@@ -44,6 +44,8 @@ const Registration = () => {
     .catch((err)=>{
       
       console.log(err)
+
+      localStorage.setItem("login",JSON.stringify([arr]))
       navigate("/login")
     })
   }

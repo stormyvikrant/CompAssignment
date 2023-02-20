@@ -30,6 +30,7 @@ const HandleLogin=(e)=>{
 
 .catch((err)=>console.log(err))
 console.log(data)
+
 navigate("/")
 let auth=data.filter(function(v, i) {
   return ((v["Username"] === arr.Username) && v.password === arr.Password);
